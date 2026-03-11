@@ -1,0 +1,541 @@
+/* =========================
+   GLOBAL
+========================= */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+/* =========================
+   FIXED BACKGROUND   background-color: rgba(255 0 0 / 0.5);
+========================= */
+.container-base {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #e2dcd1ff;
+  background-image: url('svg/waves_white_3840_1080.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* =========================
+   PAGE CONTAINER
+========================= */
+.container-page {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  height:auto;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+/* =========================
+   SECTIONS
+========================= */
+.section { 
+  position: relative; 
+  width: 100%; 
+  height:auto; /* Desktop Höhe */ 
+  padding-top: 70px; /* Abstand oben */ 
+  padding-bottom: 70px; /* Abstand unten */ 
+  margin-top: 10px; 
+}
+.hero, .legal {
+  background-color: var(--hero-color-choco);
+  background-image: url('svg/waves_blue_720_1920.svg'); 
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left 200px bottom 155px;
+  background-size: 100% 100%;
+}
+.legal {
+  background-position: left 200px bottom 0px;
+}
+.legal .legal-text * {
+  width: 70%;
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  color: var(--hero-color-blue);
+}
+/* LEGAL COLORS */
+.legal .legal-text h1 {
+  color: var(--hero-color-brown);
+}
+.legal .legal-text h2 {
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  margin-top: 0px; 
+  margin-bottom: 0px;
+  color: var(--hero-color-brown);
+}
+/* PROJECTs BACKGROUND COLORS */
+.automotive { background-color: var(--automotive-color-green)}
+.lostdot { background-color:var(--lostdot-color-green-mint)}
+.cutecounter { background-color: var(--cutecounter-color-pink)}
+.intercom { background-color: var(--hero-color-choco)}
+.sam { background-color: var(--sam-color-grey-light)}
+/* Back-to-top LABLES COLORS */
+.hero .back-to-top-label { color: var(--basic-color-creme);}
+.automotive .back-to-top-label {  color: var(--basic-color-creme);}
+.lostdot .back-to-top-label {  color: var(--basic-color-white-iniy);}
+.cutecounter .back-to-top-label {  color: var(--cutecounter-color-blue);}
+.intercom .back-to-top-label {  color: var(--basic-color-creme);}
+.sam .back-to-top-label {  color: var(--sam-color-yellow);}
+/* TEXT COLORS */
+.hero .project-text * {  color: var(--hero-color-blue);}
+.automotive .project-text * {  color: var(--basic-color-creme);}
+.lostdot .project-text * {  color: var(--lostdot-color-green-moss);}
+.cutecounter .project-text * {  color: var(--basic-color-white);}
+.intercom .project-text * {  color: var(--basic-color-white);}
+.sam .project-text * {  color: var(--basic-color-white);}
+/* one-line COLORS */
+.hero .one-line {  color: var(--hero-color-blue);}
+.automotive .one-line {  color: var(--automotive-color-pink);}
+.lostdot .one-line {  color: var(--lostdot-color-green-matcha);}
+.cutecounter .one-line {  color: var(--cutecounter-color-marin);}
+.intercom .one-line {  color: var(--intercom-color-marin);}
+.sam .one-line {  color: var(--sam-color-yellow);}
+/* HEADERs COLORS */
+.hero .project-text h1 {  color: var(--hero-color-brown);}
+.hero .project-text h2 {  color: var(--hero-color-brown);}
+.lostdot .project-text h2 {  color: var(--lostdot-color-green-iniy);}
+.sam .two-lines {  color: var(--sam-color-grey-dark);}
+
+/* =========================
+   BACK TO TOP
+========================= */
+.section-ui {
+  position: absolute;
+  inset: 0; /* füllt die Section */
+  padding-top: 70px;   /* Abstand oben */
+  padding-bottom: 70px; /* Abstand unten */
+  pointer-events: none; /* Overlay blockiert nicht das Video */
+}
+.back-to-top {
+  position: sticky; /* oder absolute */
+  top: 70px; /* Abstand zum Viewport */
+  z-index: 1000;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+}
+.back-to-top img {
+  width: 100%;
+  height: auto;
+}
+.back-to-top span {
+  writing-mode: vertical-rl;
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  color: var(--basic-color-creme);
+}
+/* RIGHT */
+.back-to-top--right {
+  margin-left: auto;
+  margin-right: 30px;
+}
+/* LEFT (rotate 180°) */
+.back-to-top--left {
+  margin-right: auto;
+  margin-left: 30px;
+  transform: rotate(180deg);
+}
+
+/* =========================
+   CONTENT
+========================= */
+.project-layout, .hero-layout {
+  position: relative;
+  inset: 0; /* füllt die Section */
+  z-index: 2;
+}
+/* =========================
+   image main
+========================= */
+.section-image-main, .hero-image-main  {
+  margin: 0 350px 0 80px;
+}
+.section-image-main img, .hero-image-main img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   video
+========================= */
+.project-video {
+  margin: 0 350px 0 80px;
+}
+.project-video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+  /* =========================
+   text
+========================= */
+.project-text {
+  display: flex;
+  gap: 80px;
+  margin: 50px 370px 0 80px;
+
+}
+.legal .legal-text { /* gleiche Breite..................................!!! */
+  margin: 0 0 0 80px;
+}
+.project-text-top,
+.project-text-block {
+  flex: 1;          /* gleiche Breite */
+  display: flex;
+  flex-direction: column; /* Inhalte vertikal gestapelt */
+  gap: 20px;        /* Abstand zwischen Überschrift & Texten */
+}
+.mobile-skills-text {
+  display: none; /* mobile-skills-text versus two-lines for desktop */
+}
+h1 {
+  font-size: 58px;
+  margin-top: 50px; 
+  margin-bottom: 50px;
+  margin-right: 100px; 
+  /* Abstand unter Überschrift */
+}
+h2 {
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  margin-top: 5px; 
+  margin-bottom: 0px;   /* Abstand unter Überschrift */
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+.two-lines {	
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  margin-top: 0px; 
+  margin-bottom: 0px;
+}
+.one-line {	
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 22px;
+  margin-top: 0px; 
+  margin-bottom: 0px;
+}
+.project-text-block {	
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+}
+
+/* =========================
+   image bottom
+========================= */
+.section-image-bottom {
+  position: relative;
+  z-index: 2;
+  margin: 100px 100px 100px 320px;
+}
+.section-image-bottom img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hero-image-bottom {
+  margin: 150px 0 0 0;
+}
+.hero-image-bottom img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================
+   PARALLAX SECTION  
+========================= */
+ .parallax{
+  position: absolute;	  
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+.section-sticky-ui {
+  position: absolute;
+  inset: 0; /* füllt die Section */
+}
+.sticky-image {
+  position: sticky; /* oder absolute */
+  top: 70px; /* Abstand zum Viewport !!!! */ 
+  z-index: 1;
+  width: 100%;
+}
+.fixed-image {
+  position: absolute;
+  z-index: 0;
+}
+.hero .fixed-image {
+  top: 28%;
+  left: 55%;
+  width: 27%;
+  height: 27%;  
+}
+.hero .sun {
+  width: 100%;
+  height: 100%;
+}
+.hero .wind { 
+  width: 100%; /* 483px */
+  height: auto;
+  margin: 120px 0 250px 0;
+}
+.lostdot .fixed-image {
+  left: 20%;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center; 
+}
+.lostdot .lostdoticon{
+  width: 100%;
+  height: 100%
+}
+.lostdot .fixed-image-mobile{
+	display:none;
+}
+.cutecounter .fixed-image {
+  left: 50%;
+  top: 20%;
+  width: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;
+}
+.cutecounter .apleicon{
+  width: 100%;
+  height: auto;;
+}
+
+
+
+
+
+
+
+
+
+.box {
+ position: relative;
+  z-index: 3;
+  left: 80%;
+  top: 14,4%;
+  bottom:16,4%;
+}
+.prototype {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+
+/* =========================
+   page
+========================= */
+.container-page {
+	position: relative; 
+    margin: 0;       /* entfernt zentrierte Ränder */
+    max-width: 100%;/* überschreibt das Desktop max-width */
+    padding: 0; /* optional, minimaler Abstand zum Rand */
+	display: flex;
+	flex-direction: column;
+}
+/* =========================
+   project und hero
+========================= */
+.section { 
+  position: relative; 
+  width: 100%; 
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertikale Zentrierung */
+  padding-bottom: 70px; /* Abstand unten */ 
+  margin-top: 0; /* ----> 10px*/
+}
+.hero, .project {
+  position: relative; 
+}
+.project-layout, .hero-layout {
+  position: relative;
+  inset: 0; /* füllt die Section */
+  z-index: 2;
+  padding-top: 0px;   /* Abstand oben */
+  padding-bottom: 0px; /* Abstand unten */
+}
+/* =========================
+   paralax
+========================= */
+ .parallax{
+  position: absolute;	  
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+.hero .fixed-image {
+  top: 35%;
+  left: 55%;
+  width: 27%;
+  height: 27%;  
+}
+/* =========================
+   BACK TO TOP
+========================= */
+.section-ui {
+  padding-top: 10px;
+  padding-bottom: 450px;
+}
+.hero .section-ui {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.back-to-top {
+  top: 400px; /* Abstand zum Viewport */
+  width: 25px;
+}
+.hero .back-to-top {
+  top: 280px; /* Abstand zum Viewport */
+}
+.back-to-top span {
+  font-size: 25px;
+}
+.back-to-top--right {
+  margin-right: 10px;
+}
+.back-to-top--left {
+  margin-left: 10px;
+}
+  /* =========================
+   project
+========================= */
+.project-layout {
+  padding: 70px 0 0 0;
+}
+.project-video {
+  margin: 0 40px 0 20px;
+}
+.section-image-main {
+  margin: 0 80px 0 20px;
+}
+.project-text {
+  margin: 0 45px 0 20px;
+  flex-direction: column;
+  gap:0px;
+}
+.two-lines {	
+ font-size:22px
+}
+.one-line {
+font-size:18px
+}
+ .project-text-block {
+ font-size:18px        /* Abstand zwischen Überschrift & Texten */
+}
+.section-image-bottom {
+  margin: 0 20px 0 20px;
+}
+/* =========================
+   hero
+========================= */
+.hero-image-main {
+  margin: 0; 
+}
+.hero .project-text {
+  flex-direction: column;
+  gap: 0px;
+  margin: 0 20px 0px 20px;
+}
+.hero .project-text-top, .project-text-block {
+  gap: 0;        /* Abstand zwischen Überschrift & Texten */
+}
+.hero .two-lines, .hero .project-text-block {	
+  display: none;
+}
+.hero .one-line {
+display: none;
+}
+.mobile-skills-text {
+  display: block;
+}
+.mobile-skills-text {	
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin-top: 0px; 
+  margin-bottom: 10px;
+}
+.hero-image-bottom {
+  margin: 50px 0 0 0;
+}
+
+/* =========================
+   legal
+========================= */
+.legal {
+  height: auto;
+  background-size: auto;  
+}
+.legal .legal-text {
+  margin: 0 50px 0 20px;
+}
+.legal .legal-text * {
+  width: 100%;
+}
+.legal .legal-text h1 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+.legal .legal-text h2 {
+  font-size: 26px;  
+}
+
+}
+
+
+
+
+
+
+
