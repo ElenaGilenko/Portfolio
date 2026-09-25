@@ -7,6 +7,7 @@
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
     font-family: 'Quicksand';
     src: url('fonts/Quicksand-Medium.ttf') format('truetype');
@@ -14,18 +15,24 @@
     font-style: normal;
 }
 
+
 :root {
 
 --basic-color-creme:#e2dcd1;
+--basic-color-ecru:#f4ede6;
 --basic-color-white:#ffffff;
 --basic-color-white-iniy:#f0fcfa;
 
---automotive-color-green:#536654;
+--wiesn-color-brown:#5c5353;
+
+--automotive-color-green:#53665451;
 --automotive-color-pink:#a26374;
 
 --hero-color-brown:#936654;
 --hero-color-choco:#312f2e;
 --hero-color-blue:#6e879d;
+
+--hero-color-blue-dark:#4a5976;
 
 --lostdot-color-green-iniy:#f6f7f8;
 --lostdot-color-green-mint:#a0b7b0;
