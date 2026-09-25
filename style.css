@@ -38,6 +38,33 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* =========================
+   MENU
+========================= */
+
+.section-menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+    padding-left: 80px;
+}
+
+.section-menu a {
+    text-decoration: none;
+    color: var(--hero-color-brown);
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 300;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.section-menu a:hover {
+    opacity: 0.5;
+}
+
 /* =========================
    SECTIONS
 ========================= */
@@ -49,12 +76,21 @@ body {
   padding-bottom: 70px; /* Abstand unten */ 
   margin-top: 10px; 
 }
+.hero {
+display: none;
+}
 .hero, .legal {
   background-color: var(--hero-color-choco);
   background-image: url('svg/waves_blue_720_1920.svg'); 
   background-repeat: no-repeat;
   background-size: auto;
   background-position: left 200px bottom 155px;
+  background-size: 100% 100%;
+}
+.automotive {
+  background-image: url('svg/background_dell.svg'); 
+  background-repeat: no-repeat;
+  background-size: auto;
   background-size: 100% 100%;
 }
 .legal {
@@ -79,6 +115,7 @@ body {
   color: var(--hero-color-brown);
 }
 /* PROJECTs BACKGROUND COLORS */
+.wiesn { background-color: var(--basic-color-ecru)}
 .automotive { background-color: var(--automotive-color-green)}
 .lostdot { background-color:var(--lostdot-color-green-mint)}
 .cutecounter { background-color: var(--cutecounter-color-pink)}
@@ -86,6 +123,7 @@ body {
 .sam { background-color: var(--sam-color-grey-light)}
 /* Back-to-top LABLES COLORS */
 .hero .back-to-top-label { color: var(--basic-color-creme);}
+.wiesn .back-to-top-label { color: var(--hero-color-brown);}
 .automotive .back-to-top-label {  color: var(--basic-color-creme);}
 .lostdot .back-to-top-label {  color: var(--basic-color-white-iniy);}
 .cutecounter .back-to-top-label {  color: var(--cutecounter-color-blue);}
@@ -93,6 +131,7 @@ body {
 .sam .back-to-top-label {  color: var(--sam-color-yellow);}
 /* TEXT COLORS */
 .hero .project-text * {  color: var(--hero-color-blue);}
+.wiesn .project-text * {  color: var(--hero-color-blue-dark);}
 .automotive .project-text * {  color: var(--basic-color-creme);}
 .lostdot .project-text * {  color: var(--lostdot-color-green-moss);}
 .cutecounter .project-text * {  color: var(--basic-color-white);}
@@ -105,11 +144,16 @@ body {
 .cutecounter .one-line {  color: var(--cutecounter-color-marin);}
 .intercom .one-line {  color: var(--intercom-color-marin);}
 .sam .one-line {  color: var(--sam-color-yellow);}
+/* two-lines COLORS */
+.wiesn .two-lines, .wiesn .mobile-skills-text { color: var(--hero-color-brown);}
 /* HEADERs COLORS */
 .hero .project-text h1 {  color: var(--hero-color-brown);}
 .hero .project-text h2 {  color: var(--hero-color-brown);}
+.wiesn .project-text h1 {  color: var(--hero-color-blue);}
+.wiesn .project-text h2 {  color: var(--hero-color-blue);}
 .lostdot .project-text h2 {  color: var(--lostdot-color-green-iniy);}
 .sam .two-lines {  color: var(--sam-color-grey-dark);}
+
 
 /* =========================
    BACK TO TOP
@@ -158,7 +202,7 @@ body {
 /* =========================
    CONTENT
 ========================= */
-.project-layout, .hero-layout {
+.project-layout, .hero-layout, .wiesn-layout {
   position: relative;
   inset: 0; /* füllt die Section */
   z-index: 2;
@@ -166,10 +210,10 @@ body {
 /* =========================
    image main
 ========================= */
-.section-image-main, .hero-image-main  {
-  margin: 0 350px 0 80px;
+.section-image-main, .hero-image-main, .wiesn-image-main {
+  margin: 30px 350px 0 80px;
 }
-.section-image-main img, .hero-image-main img {
+.section-image-main img, .hero-image-main img, .wiesn-image-main img {
   width: 100%;
   height: auto;
   display: block;
@@ -269,6 +313,48 @@ h2 {
   display: block;
 }
 
+/* =
+
+.stage wiesn .panel {
+    position: relative;
+    background-image: none !important;
+    display: flex;
+    flex-direction: column;
+}
+.panel-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.wiesn .p1 {
+    background-color: #61738d;
+	background-image: none !important;
+}
+
+.wiesn .p2 {
+    background-color: #b9aace;
+	background-image: none !important;
+}
+
+.wiesn .p3 {
+    background-color: #cadef6;
+	background-image: none !important;
+}
+
+.panel-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.panel-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 /* =========================
    PARALLAX SECTION  
 ========================= */
@@ -309,6 +395,22 @@ h2 {
   height: auto;
   margin: 120px 0 250px 0;
 }
+.wiesn .fixed-image {
+  top: 36%;
+  left: 50%;
+  width: 35%;
+  height: 20%;  
+}
+.wiesn .brezel {
+  width: 100%;
+  height: 100%;
+}
+.wiesn .salt { 
+  width: 100%; /* 483px */
+  height: auto;
+  margin: 120px 0 250px 0;
+
+}
 .lostdot .fixed-image {
   left: 20%;
   width: 70%;
@@ -339,29 +441,6 @@ h2 {
 }
 
 
-
-
-
-
-
-
-
-.box {
- position: relative;
-  z-index: 3;
-  left: 80%;
-  top: 14,4%;
-  bottom:16,4%;
-}
-.prototype {
-	width: 100%;
-	height: 100%;
-}
-
-
-
-
-
 /* =========================
    MOBILE
 ========================= */
@@ -381,7 +460,7 @@ h2 {
 	flex-direction: column;
 }
 /* =========================
-   project und hero
+   project und hero und wiesn
 ========================= */
 .section { 
   position: relative; 
@@ -393,10 +472,14 @@ h2 {
   padding-bottom: 70px; /* Abstand unten */ 
   margin-top: 0; /* ----> 10px*/
 }
-.hero, .project {
+.hero, .wiesn, .project {
   position: relative; 
 }
-.project-layout, .hero-layout {
+
+.hero {
+  display: none; 
+}
+.project-layout, .hero-layout, .wiesn-layout {
   position: relative;
   inset: 0; /* füllt die Section */
   z-index: 2;
@@ -418,6 +501,12 @@ h2 {
   top: 35%;
   left: 55%;
   width: 27%;
+  height: 27%;  
+}
+.wiesn .fixed-image {
+  top: 32%;
+  left: 50%;
+  width: 35%;
   height: 27%;  
 }
 /* =========================
@@ -479,18 +568,28 @@ font-size:18px
 /* =========================
    hero
 ========================= */
-.hero-image-main {
+.hero-image-main, .wiesn-image-main {
   margin: 0; 
 }
-.hero .project-text {
+.hero .project-text{
   flex-direction: column;
   gap: 0px;
   margin: 0 20px 0px 20px;
 }
+
+.wiesn .project-text {
+  flex-direction: column;
+  gap: 0px;
+  margin: 0 20px 0px 20px;
+}
+
 .hero .project-text-top, .project-text-block {
   gap: 0;        /* Abstand zwischen Überschrift & Texten */
 }
 .hero .two-lines, .hero .project-text-block {	
+  display: none;
+}
+.wiesn .two-lines, .section-menu {	
   display: none;
 }
 .hero .one-line {
@@ -499,12 +598,17 @@ display: none;
 .mobile-skills-text {
   display: block;
 }
+.wiesn .project-text-block {
+	width: 50%;
+}
+	
 .mobile-skills-text {	
   font-family: 'HP Simplified Light', sans-serif;
   font-weight: 300;
   font-size: 20px;
   margin-top: 0px; 
   margin-bottom: 10px;
+  
 }
 .hero-image-bottom {
   margin: 50px 0 0 0;
