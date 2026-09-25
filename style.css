@@ -525,7 +525,7 @@ font-size:18px
   margin: 0 20px 0 20px;
 }
 /* =========================
-   hero
+   hero & wiesn & menu
 ========================= */
 .hero-image-main, .wiesn-image-main {
   margin: 0; 
@@ -554,7 +554,9 @@ font-size:18px
 .hero .one-line {
 display: none;
 }
-
+.section-menu {	
+  display: none;
+}
 .mobile-skills-text {
   display: block;
 }
@@ -596,7 +598,6 @@ display: none;
 }
 
 }
-
 
 
 
