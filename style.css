@@ -548,11 +548,14 @@ font-size:18px
 .hero .two-lines, .hero .project-text-block {	
   display: none;
 }
-.wiesn .two-lines, .section-menu {	
+.wiesn .two-lines {	
   display: none;
 }
 .hero .one-line {
 display: none;
+}
+.section-menu {	
+  display: none;
 }
 .mobile-skills-text {
   display: block;
