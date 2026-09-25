@@ -15,18 +15,28 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'brittany-signature-script';
+    src: url('fonts/brittany-signature-script.regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
 
 :root {
 
 --basic-color-creme:#e2dcd1;
 --basic-color-ecru:#f4ede6;
 --basic-color-white:#ffffff;
+--basic-color-black:#000000;
 --basic-color-white-iniy:#f0fcfa;
 
 --wiesn-color-brown:#5c5353;
 
 --automotive-color-green:#53665451;
 --automotive-color-pink:#a26374;
+--automotive-color-red:#a53f45;
+--automotive-color-brown:#2e372f;
 
 --hero-color-brown:#936654;
 --hero-color-choco:#312f2e;
