@@ -139,13 +139,14 @@ display: none;
 .sam .project-text * {  color: var(--basic-color-white);}
 /* one-line COLORS */
 .hero .one-line {  color: var(--hero-color-blue);}
-.automotive .one-line {  color: var(--automotive-color-pink);}
+.automotive .one-line {  color: var(--automotive-color-red);}
 .lostdot .one-line {  color: var(--lostdot-color-green-matcha);}
 .cutecounter .one-line {  color: var(--cutecounter-color-marin);}
 .intercom .one-line {  color: var(--intercom-color-marin);}
 .sam .one-line {  color: var(--sam-color-yellow);}
 /* two-lines COLORS */
 .wiesn .two-lines, .wiesn .mobile-skills-text { color: var(--hero-color-brown);}
+.automotive .two-lines, .wiesn .mobile-skills-text { color: var(--automotive-color-brown);}
 /* HEADERs COLORS */
 .hero .project-text h1 {  color: var(--hero-color-brown);}
 .hero .project-text h2 {  color: var(--hero-color-brown);}
@@ -311,48 +312,6 @@ h2 {
   width: 100%;
   height: auto;
   display: block;
-}
-
-/* =
-
-.stage wiesn .panel {
-    position: relative;
-    background-image: none !important;
-    display: flex;
-    flex-direction: column;
-}
-.panel-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-}
-
-.wiesn .p1 {
-    background-color: #61738d;
-	background-image: none !important;
-}
-
-.wiesn .p2 {
-    background-color: #b9aace;
-	background-image: none !important;
-}
-
-.wiesn .p3 {
-    background-color: #cadef6;
-	background-image: none !important;
-}
-
-.panel-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 20px;
-}
-
-.panel-icon img {
-    width: 100%;
-    height: 100%;
-    display: block;
 }
 
 /* =========================
