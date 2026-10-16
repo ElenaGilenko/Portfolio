@@ -177,11 +177,38 @@ display: none;
   gap: 10px;
   pointer-events: auto;
 }
+
+.back-to-ref {
+  position: sticky; /* oder absolute */
+  top: 70px; /* Abstand zum Viewport */
+  z-index: 1000;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+}
+
 .back-to-top img {
   width: 100%;
   height: auto;
 }
+
+.back-to-ref img {
+  width: 100%;
+  height: auto;
+}
+
 .back-to-top span {
+  writing-mode: vertical-rl;
+  font-family: 'HP Simplified Light', sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  color: var(--basic-color-creme);
+}
+
+.back-to-ref span {
   writing-mode: vertical-rl;
   font-family: 'HP Simplified Light', sans-serif;
   font-weight: 300;
@@ -480,6 +507,10 @@ h2 {
   padding-bottom: 10px;
 }
 .back-to-top {
+  top: 400px; /* Abstand zum Viewport */
+  width: 25px;
+}
+.back-to-ref {
   top: 400px; /* Abstand zum Viewport */
   width: 25px;
 }
